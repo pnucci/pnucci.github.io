@@ -74,7 +74,8 @@
 		const scriptURL = 'https://script.google.com/macros/s/AKfycbygkf8sVKys7rKXgfdGB4rXMS1_GNUK2LZPkm7uYWMbSxjavvY/exec';
 		const actionName = 'contactFormSubmit';
 		const siteKey = '6LfBdHsUAAAAACNZBN8ji4O9DmN6sQ4TjhUqH6GM';
-		function contactFormSubmit() {
+		function contactFormSubmit(e) {
+			e.preventDefault();
 			grecaptcha.ready(function () {
 				grecaptcha.execute(siteKey, { action: actionName })
 					.then(function (token) {
@@ -95,7 +96,13 @@
 					})
 			});
 		}
+
 	</script>
+	<!-- Widget de link do Calendly - início -->
+	<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+	<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+	<!-- Widget de link do Calendly - fim -->
+
 </head>
 
 <body class="is-preload">
@@ -170,11 +177,11 @@
 					<div class="my-topics">
 						<div>
 							<div class="icon fa-plane"></div>
-							<div>Preparação para trabalhar no exterior (aspectos técnicos, culturais e burocraticos)</div>
+							<div>Preparação para trabalhar no exterior (aspectos técnicos, culturais e burocráticos)</div>
 						</div>
 						<div>
 							<div class="icon fa-comments"></div>
-							<div>Entrevistas: testar e melhorar performance (parte técnica e lingua inglesa)</div>
+							<div>Entrevistas: testar e treinar performance (parte técnica e lingua inglesa)</div>
 						</div>
 						<div>
 							<div class="icon fa-code"></div>
@@ -255,6 +262,11 @@
 							text-align: center;
 							padding-top: 1rem;
 						}
+						.offer-panel-price small {
+							font-weight: lighter;
+							font-size: 70%;
+							vertical-align: text-top;
+						}
 						.offer-panel-bottom{
 							border-radius: 0 0 2rem 0;
 							padding-top: 1.5rem;
@@ -272,17 +284,17 @@
 							<div>
 								<ul>
 									<li>tira-dúvidas e explicações técnicas</li>
-									<li>relatos de experiências em temas de interesse</li>
+									<li>relatos de experiências e lições aprendidas</li>
 									<li>coaching / identificação de metas e próximos passos</li>
 									<li>skype, google hangouts ou recebendo ligação telefônica sem custo adicional</li>
 								</ul>
 
 							</div>
-							<div class="offer-panel-price">
+							<!-- <div class="offer-panel-price">
 								R$ 55
-							</div>
+							</div> -->
 							<div class="offer-panel-bottom">
-								<a class="button primary large color2" href="https://pedronucci.youcanbook.me/?CUSTOM_PRICE=55&PRODUCT=Sessao">
+								<a class="button primary large color2" onclick="Calendly.showPopupWidget('https://calendly.com/pnucci/sessao-de-30-minutos');return false;">
 									Agendar
 								</a>
 							</div>
@@ -290,20 +302,40 @@
 						</div>
 						<div class="offer-panel">
 							<div class="offer-panel-top">
-								Revisão escrita de curriculum vitae / resume
+								Sessão experimental
 							</div>
 							<div>
 								<ul>
-									<li>relatório com analise crítica e sugestões de melhoria</li>
+									<li>10 minutos</li>
+									<li>Sem compromisso</li>
+									<li>Disponível apenas 1 vez por cliente</li>
+								</ul>
+							</div>
+							<div class="offer-panel-price">
+								1 <small>&euro;</small>
+							</div>
+							<div class="offer-panel-bottom">
+								<a class="button primary large color2" onclick="Calendly.showPopupWidget('https://calendly.com/pnucci/sessao-experimental');return false;">
+									Agendar
+								</a>
+							</div>
+						</div>
+						<div class="offer-panel">
+							<div class="offer-panel-top">
+								Revisão de curriculum vitae / resume
+							</div>
+							<div>
+								<ul>
+									<li>relatório escrito com análise crítica e sugestões de melhoria</li>
 									<li>desconto de 50% para uma segunda revisão</li>
 								</ul>
 
 							</div>
-							<div class="offer-panel-price">
-								R$ 20
-							</div>
+							<!-- <div class="offer-panel-price">
+									R$ 20
+								</div> -->
 							<div class="offer-panel-bottom">
-								<a class="button primary large color2" href="https://pedronucci.youcanbook.me/">
+								<a class="button primary large color2" onclick="Calendly.showPopupWidget('https://calendly.com/pnucci/sessao-de-30-minutos');return false;">
 									Agendar
 								</a>
 							</div>
@@ -383,25 +415,25 @@
 							ou poucas horas.</p>
 					</div>
 					<div class="span-3-25">
-						<form name="contactForm">
+						<form name="contactForm" onsubmit="contactFormSubmit(event)">
 							<input id="recaptchaToken" style="color:black;" type="hidden" name="recaptchaToken">
 
 							<div class="fields">
 								<div class="field half">
 									<label for="name">Nome</label>
-									<input type="text" name="name" id="name" />
+									<input type="text" name="name" id="name" required />
 								</div>
 								<div class="field half">
 									<label for="email">Email</label>
-									<input type="email" name="email" id="email" />
+									<input type="email" name="email" id="email" required />
 								</div>
 								<div class="field">
 									<label for="message">Mensagem</label>
-									<textarea name="message" id="message" rows="4"></textarea>
+									<textarea name="message" id="message" rows="4" required></textarea>
 								</div>
 							</div>
 							<ul class="actions">
-								<li><button type="button" class="button primary" onclick="contactFormSubmit()">Enviar</button></li>
+								<li><input type="submit" class="button primary" value="Enviar"/></li>
 							</ul>
 						</form>
 					</div>

@@ -10,6 +10,16 @@
 		gtag('js', new Date());
 		gtag('config', 'UA-129667111-1');
 	</script>
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-MVQ5TDH');</script>
+	<!-- End Google Tag Manager -->
 	<title>Pedro Nucci</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -111,6 +121,9 @@
 </head>
 
 <body class="is-preload">
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVQ5TDH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 
 	<div id="page-wrapper">
 
@@ -146,7 +159,7 @@
 				</div>
 			</section>
 
-			<section class="panel banner right color1">
+			<section class="panel banner right color1 visibility-tracking" id="section-como-posso-ajudar">
 				<div class="content span-5">
 					<!-- <section class="panel color1">
 				<div class="intro joined"> -->
@@ -190,7 +203,7 @@
 				</div>
 			</section>
 
-			<section class="panel banner right color2-alt">
+			<section class="panel banner right color2-alt visibility-tracking" id="section-sobre-1">
 				<div class="content span-3-75" style="text-align: justify;">
 					<h2 class="major">Pedro Nucci</h2>
 
@@ -201,13 +214,10 @@
 						coaching para quem deseja se colocar bem no mercado de TI (inclusive para quem vem de outras áreas e/ou não
 						deseja
 						ser
-						programador). Iremos avaliar onde você está e onde
+						programador). Iremos avaliar onde você está e onde
 						quer chegar,
 						traçando um plano realista, de acordo com seus potenciais e deficiências.
 					</p>
-					<!-- <ul class="actions">
-						<li><a class="button" href="#mais-sobre">Mais...</a></li>
-					</ul> -->
 				</div>
 				<div class="image filtered span-1-75" data-position="25% 25%">
 					<img src="images/portrait-S.jpg" alt="" />
@@ -217,7 +227,7 @@
 			</section>
 
 
-			<section class="panel spotlight large right" id="mais-sobre">
+			<section class="panel spotlight large right visibility-tracking" id="section-sobre-2">
 				<div class="content span-5">
 					<!-- <h2 class="major">Sobre mim</h2> -->
 					<p>
@@ -301,7 +311,7 @@
 
 
 					<div class="offer-panel-set">
-						<div class="offer-panel">
+						<div class="offer-panel visibility-tracking" id="offer-panel-sessao-30-min">
 							<div class="offer-panel-top">
 								Sessão de 30 minutos
 							</div>
@@ -318,13 +328,14 @@
 								R$ 55
 							</div> -->
 							<div class="offer-panel-bottom">
-								<a class="button primary large color2" onclick="Calendly.showPopupWidget('https://calendly.com/pnucci/sessao-de-30-minutos');return false;">
+								<a class="button primary large color2 click-tracking" onclick="Calendly.showPopupWidget('https://calendly.com/pnucci/sessao-de-30-minutos');return false;"
+								 id="btn-agendar-sessao-30-min">
 									Agendar
 								</a>
 							</div>
 
 						</div>
-						<div class="offer-panel">
+						<div class="offer-panel visibility-tracking" id="offer-panel-sessao-experimental">
 							<div class="offer-panel-top">
 								Sessão experimental
 							</div>
@@ -339,12 +350,13 @@
 								1 <small>&euro;</small>
 							</div>
 							<div class="offer-panel-bottom">
-								<a class="button primary large color2" onclick="Calendly.showPopupWidget('https://calendly.com/pnucci/sessao-experimental');return false;">
+								<a class="button primary large color2 click-tracking" onclick="Calendly.showPopupWidget('https://calendly.com/pnucci/sessao-experimental');return false;"
+								 id="btn-agendar-sessao-experimental">
 									Agendar
 								</a>
 							</div>
 						</div>
-						<div class="offer-panel">
+						<div class="offer-panel visibility-tracking" id="offer-panel-revisao-cv">
 							<div class="offer-panel-top">
 								Revisão de curriculum vitae / resume
 							</div>
@@ -359,7 +371,8 @@
 									R$ 20
 								</div> -->
 							<div class="offer-panel-bottom">
-								<a class="button primary large color2" onclick="Calendly.showPopupWidget('https://calendly.com/pnucci/sessao-de-30-minutos');return false;">
+								<a class="button primary large color2 click-tracking" onclick="Calendly.showPopupWidget('https://calendly.com/pnucci/sessao-de-30-minutos');return false;"
+								 id="btn-agendar-revisao-cv">
 									Agendar
 								</a>
 							</div>
@@ -408,7 +421,7 @@
 				</div>
 			</section>
 
-			<section class="panel color4-alt">
+			<section class="panel color4-alt visibility-tracking" id="section-contato">
 				<div class="inner columns divided">
 					<div class="span-1-5">
 						<h2 class="major">Contato</h2>
@@ -434,14 +447,14 @@
 								</div>
 							</div>
 							<ul class="actions">
-								<li><input type="submit" class="button primary" value="Enviar" /></li>
+								<li><input type="submit" class="button primary click-tracking" value="Enviar" id="btn-submit-contact" /></li>
 							</ul>
 						</form>
 					</div>
 					<div class="span-1-5">
 						<ul class="contact-icons color1">
-							<li class="icon fa-linkedin"><a href="https://www.linkedin.com/in/pnucci/">LinkedIn</a></li>
-							<li class="icon fa-github"><a href="https://github.com/pnucci">GitHub</a></li>
+							<li class="icon fa-linkedin click-tracking" id="link-linkedin"><a href="https://www.linkedin.com/in/pnucci/">LinkedIn</a></li>
+							<li class="icon fa-github click-tracking" id="link-github"><a href="https://github.com/pnucci">GitHub</a></li>
 						</ul>
 					</div>
 				</div>

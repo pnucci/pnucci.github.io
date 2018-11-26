@@ -155,7 +155,12 @@
 				</div>
 
 				<div class="image" data-position="top left">
-					<img src="images/smart-watch.jpg" alt="" />
+					<img id="first-background" src="images/smart-watch-S.jpg" alt="" />
+					<!-- <picture>
+						<source media="(max-width: 600px)" srcset="images/smart-watch-S.jpg" />
+						<source media="(min-width: 601px)" srcset="images/smart-watch-L.jpg" />
+						<img src="images/smart-watch-S.jpg" alt=""/>
+					</picture> -->
 				</div>
 			</section>
 
@@ -220,9 +225,11 @@
 					</p>
 				</div>
 				<div class="image filtered span-1-75" data-position="25% 25%">
-					<img src="images/portrait-S.jpg" alt="" />
-					<source media="(max-width: 800px)" srcset="images/portrait-S.jpg" />
-					<source media="(min-width: 800px)" srcset="images/portrait-L.jpg" />
+					<picture>
+						<source media="(max-width: 800px)" srcset="images/portrait-S.jpg" />
+						<source media="(min-width: 801px)" srcset="images/portrait-L.jpg" />
+						<img src="images/portrait-S.jpg" alt="" />
+					</picture>
 				</div>
 			</section>
 
@@ -231,7 +238,6 @@
 				<div class="content span-5">
 					<!-- <h2 class="major">Sobre mim</h2> -->
 					<p>
-
 						Depois de alguns anos como servidor concursado, entrei no mercado como desenvolvedor e hoje lidero um time de
 						desenvolvimento web com 12 pessoas, usando
 						metodologias ágeis, JavaScript, Node.js e React.js, dentre outras.
@@ -324,9 +330,9 @@
 								</ul>
 
 							</div>
-							<!-- <div class="offer-panel-price">
-								R$ 55
-							</div> -->
+							<div class="offer-panel-price">
+								12 <small>&euro;</small>
+							</div>
 							<div class="offer-panel-bottom">
 								<a class="button primary large color2 click-tracking" onclick="Calendly.showPopupWidget('https://calendly.com/pnucci/sessao-de-30-minutos');return false;"
 								 id="btn-agendar-sessao-30-min">
@@ -367,9 +373,9 @@
 								</ul>
 
 							</div>
-							<!-- <div class="offer-panel-price">
-									R$ 20
-								</div> -->
+							<div class="offer-panel-price">
+								4.50 <small>&euro;</small>
+							</div>
 							<div class="offer-panel-bottom">
 								<a class="button primary large color2 click-tracking" onclick="Calendly.showPopupWidget('https://calendly.com/pnucci/sessao-de-30-minutos');return false;"
 								 id="btn-agendar-revisao-cv">

@@ -57,11 +57,7 @@
 		.my-topics > div > .icon {
 			padding-right: 0.5rem;
 		}
-		@media screen and (max-width: 600px) {
-			.my-topics > div{
-				width: initial;
-			} 
-		}
+		
 		.price{
 			font-family: "Lato",sans-serif;
 			font-size: 60px;
@@ -77,6 +73,29 @@
 		}
 		.grecaptcha-badge.form-focused{
 			display:initial;
+		}
+
+		.main-title{
+			line-height: initial;
+			font-family: 'Work Sans', sans-serif;
+			font-weight: 700;
+			font-size: 5rem;
+			color: rgba(255, 255, 255, 0.85);
+		}
+		.main-subtitle{
+			font-weight: 200;
+			font-size: 1.7rem;
+		}
+		@media screen and (max-width: 600px) {
+			.my-topics > div{
+				width: initial;
+			} 
+			.main-title{
+				font-size: 2.3rem;
+			}
+			.main-subtitle{
+				font-size: 1.3rem;
+			}
 		}
 		</style>
 	<script src='https://www.google.com/recaptcha/api.js?render=6LfBdHsUAAAAACNZBN8ji4O9DmN6sQ4TjhUqH6GM'></script>
@@ -115,7 +134,7 @@
 		html, body {
 				height: auto;
 			}
-		</style>
+	</style>
 	<!-- Widget de link do Calendly - fim -->
 
 </head>
@@ -130,28 +149,22 @@
 		<div id="wrapper">
 
 			<section class="panel spotlight medium right" id="first">
-				<div style="flex-direction: column;display: flex;justify-content: space-around;align-items: center;">
-					<div style="
-							flex-direction: row;
-							display: flex;
-						">
-						<div style="
-							display: flex;
-							flex-direction: column;
-							align-items: center;
-							padding-right: 2rem;
-						">
-							<div style="line-height: initial;font-family: 'Work Sans', sans-serif;font-weight: 700;font-size: 75px;color: rgba(255, 255, 255, 0.85);">
+				<div style="display: flex;flex: 1;flex-direction: column;justify-content: space-between;margin: 5%;">
+					<div style="padding-bottom: 6rem; display: flex; flex-direction: row; justify-content: flex-end">
+						<div class="main-title" style="text-align: right;">
+							<div>
 								ACELERE
 							</div>
-							<div style="line-height: initial;font-family: 'Work Sans', sans-serif;font-weight: 200;font-size: 34px;color: rgba(255, 255, 255, 0.85);">
+							<div class="main-subtitle">
 								SUA CARREIRA EM T.I.
 							</div>
 						</div>
 					</div>
-					<ul class="actions" style="padding-top: 3em">
-						<li><a class="button primary large" href="#agendar">Agendar</a></li>
-					</ul>
+					<div style="display: flex;flex-direction: row;justify-content: flex-end;">
+						<ul class="actions" style="padding-top: 3em">
+							<li><a class="button primary large" href="#agendar">Oferta</a></li>
+						</ul>
+					</div>
 				</div>
 
 				<div class="image" data-position="top left">
@@ -168,7 +181,7 @@
 				<div class="content span-5">
 					<!-- <section class="panel color1">
 				<div class="intro joined"> -->
-					<h2 class="major">Como posso ajudar</h2>
+					<h2 class="major">Áreas de atuação</h2>
 					<div class="my-topics">
 						<div>
 							<div class="icon fa-plane"></div>
@@ -348,7 +361,6 @@
 							<div>
 								<ul>
 									<li>10 minutos</li>
-									<li>Sem compromisso</li>
 									<li>Disponível apenas 1 vez por cliente</li>
 								</ul>
 							</div>
@@ -431,7 +443,7 @@
 				<div class="inner columns divided">
 					<div class="span-1-5">
 						<h2 class="major">Contato</h2>
-						<p>Fique à vontade para comentar ou tirar dúvidas sobre os serviços que ofereço. Geralmente respondo em minutos
+						<p>Me escreva! Comente ou tire dúvidas sobre os serviços que ofereço. Geralmente respondo em minutos
 							ou poucas horas.</p>
 					</div>
 					<div class="span-3-25">
